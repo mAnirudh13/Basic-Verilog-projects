@@ -15,7 +15,7 @@ module registerArray(input [3:0]address,
                     if (read) data_read <= memory[address];
                     if (write) begin
                         memory[address] <= data;
-                        write_status <= 1'b1;
+                        write_status <= 1'b1; // tells if write is successful.
                     end
                 end
                 else write_status <= 1'b0; //if read&write = 0, then from line 8 data is already z.
